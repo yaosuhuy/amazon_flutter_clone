@@ -2,6 +2,7 @@ import 'package:first_application/constants/global_variables.dart';
 import 'package:flutter/material.dart';
 import 'package:first_application/providers/user_provider.dart';
 import 'package:provider/provider.dart';
+
 class BelowAppBar extends StatelessWidget {
   const BelowAppBar({super.key});
 
@@ -26,6 +27,7 @@ class BelowAppBar extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 22,
                     color: Colors.black,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ],

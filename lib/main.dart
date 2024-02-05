@@ -11,7 +11,7 @@ import 'dart:io';
 import 'package:provider/provider.dart';
 
 String url =
-    Platform.isAndroid ? 'http://192.168.0.2:3000' : 'http://localhost:3000';
+    Platform.isAndroid ? 'http://192.168.0.6:3000' : 'http://localhost:3000';
 // String url =
 //     Platform.isAndroid ? 'http://192.168.100.99:3000' : 'http://localhost:3000';
 void main() {
@@ -51,6 +51,7 @@ class _MyAppState extends State<MyApp> {
       ),
       onGenerateRoute: (settings) => generateRoute(settings),
       home: Provider.of<UserProvider>(context).user.token.isNotEmpty
+      ? Provider.of<UserProvider>(context).user.type == 'user'
           ? const BottomBar()
           : const AuthScreen(),
     );

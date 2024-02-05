@@ -1,5 +1,7 @@
 import 'package:first_application/constants/global_variables.dart';
 import 'package:first_application/features/auth/widgets/bottom_app_bar.dart';
+import 'package:first_application/features/auth/widgets/orders.dart';
+import 'package:first_application/features/auth/widgets/top_buttons.dart';
 import 'package:flutter/material.dart';
 
 class AccountScreen extends StatelessWidget {
@@ -47,7 +49,11 @@ class AccountScreen extends StatelessWidget {
         children: const [
           BelowAppBar(),
           SizedBox(height: 10),
+          TopButtons(),
+          SizedBox(height: 20),
+          Orders()
         ],
+        
       ),
     );
   }
